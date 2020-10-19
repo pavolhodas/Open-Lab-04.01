@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Linq;
 
 namespace Open_Lab_04._01
 {
@@ -6,7 +6,14 @@ namespace Open_Lab_04._01
     {
         public bool DoubleLetters(string str)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < str.Length - 1; ++i)
+            {
+                if (str[i] == str[i + 1])
+                    return true;
+            }
+            return false;
         }
+
     }
+    
 }
